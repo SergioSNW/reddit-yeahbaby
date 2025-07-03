@@ -1,0 +1,357 @@
+.inactive .post {
+  list-style-type: none;
+  display: flex;
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
+  justify-content: start;
+  align-items: center;
+  height: 8rem;
+  border-radius: 3pt;
+  width: 100%;
+  overflow: hidden;
+}
+
+#light .inactive .post {
+  background-color: #d9dce4;
+  transition-property: background-color;
+  transition-duration: 0.5s;
+}
+
+#dark .inactive .post {
+  background-color: #4e4e4e;
+  transition-property: background-color;
+  transition-duration: 0.5s;
+}
+
+.post:hover {
+  cursor: pointer;
+}
+
+.active .post {
+  list-style-type: none;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  height: 35rem;
+  width: 100%;
+  overflow: hidden;
+}
+
+#light .active .post {
+  background-color: #6d6bffbc;
+}
+
+#dark .active .post {
+  background-color: #2f2f53;
+}
+
+.active .post .score {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 7%;
+  height: 96.31%;
+  padding-top: 1.5rem;
+  background-color: #161627;
+  border-top-right-radius: 3pt;
+  border-bottom-right-radius: 3pt;
+}
+
+.active .post .media {
+  max-width: 100%;
+  max-height: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.inactive .post .media {
+  display: none;
+}
+
+#light .inactive .post:hover {
+  background-color: #807efecb;
+  box-shadow: #393863;
+}
+
+#dark .inactive .post:hover {
+  background-color: #2f2f53;
+  box-shadow: #393863;
+}
+
+.inactive .post .score {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 7%;
+  height: 81.1%;
+  padding-top: 1.5rem;
+  border-top-right-radius: 3pt;
+  border-bottom-right-radius: 3pt;
+}
+
+#light .inactive .post .score {
+  background-color: #6e6e6ed0;
+  color: rgb(0, 0, 0);
+  transition: background-color 0.5s, color 0.5s;
+}
+
+#light .inactive:hover .post .score {
+  background-color: #5b5ba8;
+  color: white;
+}
+
+#dark .inactive:hover .post .score {
+  background-color: #5b5ba8;
+  color: white;
+}
+
+#dark .inactive .post .score {
+  background-color: #6a6a6a;
+  color: white;
+  transition: background-color 0.5s, color 0.5s;
+}
+
+#light .active .post .score {
+  background-color: #5b5ba8;
+  color: white;
+}
+
+#dark .active .post .score {
+  background-color: #161627;
+}
+
+.post .score img {
+  width: 45%;
+}
+
+.inactive .post .score p {
+  font-size: 70%;
+}
+
+.active .post .score p {
+  font-size: 85%;
+}
+
+.post .left-side {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 10%;
+  height: 100%;
+}
+
+.post .left-side img {
+  max-height: 80%;
+  max-width: 80%;
+  border-radius: 4pt;
+}
+
+.post .right-side {
+  width: 85%;
+  height: 100%;
+  display: block;
+}
+
+.post .right-side .top {
+  display: flex;
+  width: 100%;
+  padding: 0;
+  margin-top: 0.5rem;
+  margin-bottom: 0;
+  margin-left: -1rem;
+}
+
+.post .right-side .top p {
+  font-size: 0.8rem;
+  padding: 0.1rem 0.5rem 0.2rem 0.5rem;
+  margin: 0;
+}
+
+.post .right-side .top .subreddit {
+  font-weight: bold;
+}
+
+.post .right-side .top .subreddit:hover {
+  font-style: italic;
+  text-decoration: underline;
+}
+
+.post .right-side .top .author {
+  font-style: italic;
+  margin-right: 0.5rem;
+}
+
+.post .right-side .bottom {
+  margin-top: 0;
+  padding-bottom: 0;
+  padding-top: 0;
+}
+
+.post .right-side .bottom .title {
+  width: 92%;
+  font-size: 1.3rem;
+  font-weight: 500;
+  padding-top: 0;
+  margin-top: 0;
+  margin-left: 1rem;
+  font-weight: 300;
+}
+
+.inactive .media {
+  display: none;
+}
+
+.active .media img {
+  max-width: 90%;
+  max-height: 90%;
+  padding-bottom: 0;
+}
+
+.active .media .gif {
+  height: 90%;
+  max-width: 90%;
+  padding-bottom: 2rem;
+}
+
+.active .media .reddit-video {
+  max-width: 100%;
+  max-height: 80%;
+  margin: 0;
+  padding: 0;
+}
+
+.active .media .link {
+  height: 40%;
+  text-align: center;
+  margin: 0;
+  padding-bottom: 7rem;
+}
+
+.active .media .gallery {
+  height: 40%;
+  text-align: center;
+  margin: 0;
+  padding-bottom: 7rem;
+}
+
+.active .media .text {
+  font-size: 0.9rem;
+  height: 90%;
+  width: 95%;
+  overflow: hidden;
+  padding-top: 0;
+  margin-top: 0;
+}
+
+.active .media .youtube-video {
+  max-width: 100%;
+  max-height: 100%;
+  margin-bottom: 4rem;
+}
+
+.inactive .comments-button {
+  display: none;
+}
+
+.active .hidden {
+  display: none;
+}
+
+.inactive .hidden {
+  display: none;
+}
+
+.inactive .show {
+  display: none;
+}
+
+.active .post .comments-button {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-top: 31rem;
+  margin-right: 0.25rem;
+  border: none;
+  height: 10%;
+  width: 15%;
+  cursor: pointer;
+  border-radius: 4pt;
+  font-size: 0.7rem;
+}
+
+#light .active .post .comments-button {
+  background-color: rgb(185, 185, 185);
+}
+
+#dark .active .post .comments-button {
+  background-color: #161627;
+  color: white;
+}
+
+#light .active .post .comments-button:hover {
+  background-color: rgb(138, 138, 138);
+}
+
+#dark .active .post .comments-button:hover {
+  background-color: #000000;
+  border: 0.5pt solid white;
+}
+
+.active .post .comments-button .comment-icon {
+  border-radius: 0;
+  height: 70%;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+.active #comments {
+  overflow: scroll;
+  min-height: auto;
+  max-height: 25rem;
+}
+
+@media (max-width: 480px) {
+  .post .right-side .bottom .title {
+    margin-top: 0;
+    margin-left: 1vw;
+    font-size: 2.5vw;
+  }
+
+  .post .right-side .top .author {
+    font-size: 1.5vw;
+  }
+
+  .post .right-side .top .subreddit {
+    font-size: 2vw;
+  }
+
+  .inactive .post {
+    height: 20vw;
+  }
+
+  .active .post {
+    height: 70vw;
+  }
+
+  .active .post .comments-button {
+    position: relative;
+    margin-top: 61vw;
+    margin-left: 0;
+    font-size: 1.5vw;
+    height: 6vw;
+    width: 6vw;
+    font-size: 0.01vw;
+  }
+
+  .inactive .post .score p {
+    font-size: 1.5vw;
+  }
+
+  .active .post .score p {
+    font-size: 1.5vw;
+  }
+}

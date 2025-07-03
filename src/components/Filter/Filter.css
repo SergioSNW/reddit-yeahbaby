@@ -1,0 +1,155 @@
+.filter {
+  padding: 0;
+  margin: 0 0.25rem 0 0.25rem;
+  width: 98%;
+  border-radius: 4pt;
+}
+
+#light .filter {
+  background-color: white;
+  transition-property: background-color;
+  transition-duration: 0.5s;
+}
+
+#dark .filter {
+  background-color: rgba(94, 94, 94, 0.425);
+  transition-property: background-color;
+  transition-duration: 0.5s;
+}
+
+.filter .filter-text {
+  text-align: center;
+  padding: 0;
+  width: 100%;
+}
+
+.filter .filter-text p {
+  padding: 0;
+  margin: 0;
+}
+
+.filter .containter {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.filter .card {
+  margin: 0.2rem 0.2rem 0.2rem 0.2rem;
+  padding: 0.7rem;
+  display: flex;
+  width: 15.5%;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 5pt;
+}
+
+#light .filter .card {
+  background-color: #504dffb3;
+  transition-property: background-color;
+  transition-duration: 0.5s;
+}
+
+#dark .filter .card {
+  background-color: #504dff76;
+  transition-property: background-color;
+  transition-duration: 0.5s;
+}
+
+#light .filter .active {
+  background-color: #504dff;
+  border: 0.5pt solid black;
+  transition-property: background-color;
+  transition-duration: 0.5s;
+}
+
+#dark .filter .active {
+  background-color: #504dffed;
+  border: 0.5pt solid white;
+  transition-property: background-color;
+  transition-duration: 0.5s;
+}
+
+.filter .card:hover {
+  cursor: pointer;
+}
+
+#light .filter .card:hover {
+  background-color: #504dffed;
+  transition-property: background-color;
+  transition-duration: 0.5s;
+}
+
+#dark .filter .card:hover {
+  background-color: #504dffed;
+  transition-property: background-color;
+  transition-duration: 0.5s;
+}
+
+.filter .card:focus {
+  background-color: #504dff;
+  transition-property: background-color;
+  transition-duration: 0.5s;
+  cursor: pointer;
+}
+
+.filter .card img {
+  height: 2.5rem;
+  margin: 0;
+  padding: 0;
+}
+
+.filter .card p {
+  margin: 0;
+}
+
+@media (max-width: 480px) {
+  .filter {
+    font-size: 2vw;
+  }
+
+  .filter .card {
+    padding: 0;
+    height: 7vw;
+    width: 7vw;
+  }
+
+  .filter .card img {
+    margin-top: 0.5vw;
+    height: 4vw;
+  }
+}
+
+@media (max-width: 768px) {
+  .filter {
+    font-size: 1.5vw;
+  }
+
+  .filter .card {
+    padding: 0 0 0.5vw 0;
+    height: 6vw;
+    width: 6vw;
+  }
+
+  .filter .card img {
+    margin-top: 0.5vw;
+    height: 4vw;
+  }
+}
+
+@media (max-width: 1024px) {
+  .filter {
+    font-size: 1.5vw;
+  }
+
+  .filter .card {
+    padding: 0 0 0.5vw 0;
+    height: 6vw;
+    width: 6vw;
+  }
+
+  .filter .card img {
+    margin-top: 0.5vw;
+    height: 4vw;
+  }
+}

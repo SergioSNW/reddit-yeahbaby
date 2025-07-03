@@ -1,24 +1,35 @@
+import React, { createContext, useState } from 'react';
+import { Provider } from 'react-redux';
+import store from './Store/store';
 import logo from './logo.svg';
 import './App.css';
+import { Header } from './components/Header/Header';
+import { SubredditList } from './components/SubredditList/SubredditList';
+import { Feed } from './components/Feed/Feed';
+import { Filter } from './components/Filter/Filter';
+
+export const ThemeContext = createContext(null);
 
 function App() {
+  const [theme, setTheme] = useState('light');
+
+  const toggleTheme = () => {
+    setTheme((curr) => (curr === 'light' ? 'dark' : 'light'));
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Provider store={store}>
+      <div className="app" id={theme}>
+        <Header toggleTheme={toggleTheme} />
+        <div className="main">
+          <div className="side-bar">
+            <Filter />
+            <SubredditList />
+          </div>
+          <Feed />
+        </div>
+      </div>
+    </Provider>
   );
 }
 

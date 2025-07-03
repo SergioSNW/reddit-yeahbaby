@@ -1,0 +1,83 @@
+.comment {
+  background-color: rgba(62, 62, 62, 0.624);
+  padding: 0.5rem;
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
+  margin-left: 1rem;
+  width: 93%;
+}
+
+.comment .top {
+  display: flex;
+  width: 50%;
+  height: 2rem;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 0;
+  margin-top: 0;
+}
+
+.comment .top .author {
+  margin-right: 1rem;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 0;
+  height: 100%;
+  font-size: 0.75rem;
+}
+
+.comment .top .score {
+  display: flex;
+  height: 2rem;
+  padding-top: 0;
+  margin-top: 0;
+}
+
+.comment .top img {
+  height: 0.75rem;
+  padding-top: 0.25rem;
+  padding-right: 0.2rem;
+}
+
+.comment .top p {
+  padding-top: 0;
+  margin-top: 0;
+}
+
+.comment .body {
+  margin-top: 0;
+}
+
+@keyframes blink {
+  50% {
+    color: transparent;
+  }
+}
+.loader__dot {
+  animation: 1s blink infinite;
+}
+.loader__dot:nth-child(2) {
+  animation-delay: 250ms;
+}
+.loader__dot:nth-child(3) {
+  animation-delay: 500ms;
+}
+
+@media (max-width: 480px) {
+  .comment .body {
+    font-size: 2.5vw;
+  }
+
+  .comment .top .author {
+    font-size: 2vw;
+  }
+
+  .comment .top img {
+    height: 1.7vw;
+    margin-top: -0.5vw;
+  }
+
+  .comment .top p {
+    font-size: 2vw;
+  }
+}

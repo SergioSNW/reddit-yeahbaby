@@ -1,5 +1,13 @@
-.App {
-  text-align: center;
+.app {
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  padding-top: 0.25rem;
+  padding-bottom: 0.5rem;
+  width: 100%;
+  overflow-x: hidden;
 }
 
 .App-logo {
@@ -34,5 +42,28 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+.main {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.side-bar {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  max-width: 30%;
+  padding: 0;
+}
+
+@media (max-width: 480px) {
+  .side-bar {
+    width: 25%;
   }
 }
