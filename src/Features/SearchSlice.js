@@ -24,7 +24,7 @@ const searchSlice = createSlice({
       state.searchLoading = true;
       state.searchError = false;
     });
-    builder.addCase(fetchSearch.fulfilled, (state) => {
+    builder.addCase(fetchSearch.fulfilled, (state, action) => {
       state.results = action.payload;
       state.searchLoading = false;
       state.searchError = false;

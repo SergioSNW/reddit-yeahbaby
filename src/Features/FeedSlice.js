@@ -44,5 +44,40 @@ const feedSlice = createSlice({
       state.filter = action.payload;
     },
   },
-  extraReducers: (builder) => {},
+  extraReducers: (builder) => {
+    builder.addCase(fetchFeed.pending, (state) => {
+      state.isLoading = true;
+      state.error = false;
+    });
+    builder.addCase(fetchFeed.fulfilled, (state, action) => {
+      state.feed = action.payload;
+      state.isLoading = false;
+      state.error = false;
+    });
+    builder.addCase(fetchFeed.rejected, (state) => {
+      state.isLoading = false;
+      state.error = true;
+    });
+    builder.addCase(fetchComments.pending, (state) => {
+      state.commentsIsLoading = true;
+      state.commentsIsError = false;
+    });
+    builder.addCase(fetchComments.fulfilled, (state, action) => {
+      state.comments = action.payload;
+      state.commentsIsLoading = false;
+      state.commentsIsError = false;
+    });
+    builder.addCase(fetchComments.rejected, (state) => {
+      state.commentsIsLoading = false;
+      state.commentsIsError = true;
+    });
+  },
 });
+
+export const { setSelectedSubreddit, setSearchTerm, setFilter } =
+  feedSlice.actions;
+export const selectFeed = (state) => state.feed.feed;
+export const selectSelectedSubreddit = (state) => state.feed.selectedSubreddit;
+export const selectSearchTerm = (state) => state.feed.searchTerm;
+export const selectComments = (state) => state.feed.comments;
+export default feedSlice.reducer;
