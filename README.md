@@ -56,10 +56,6 @@ To optimize the Reddit? YeahBaby website for search engines and improve its visi
 
 - Structured Data: Reddit? YeahBaby utilizes structured data markup, such as JSON-LD, to provide additional information to search engines. This allows search engines to better understand the content and context of the website.
 
-## Contributions
-
-Reddit? YeahBaby is an open-source project, and contributions are welcome. If you would like to contribute to the development of Reddit? YeahBaby, please refer to the GitHub repository for more information.
-
 ## License
 
 Reddit? YeahBaby is released under the MIT License. Feel free to modify and use the source code according to the terms of this license.
