@@ -9,6 +9,10 @@
   width: 99%;
 }
 
+.header h2 {
+  margin-left: 20px;
+}
+
 #dark .header {
   background-color: rgb(37, 37, 37);
   transition-property: background-color;
@@ -31,7 +35,9 @@
 }
 
 .header #logo {
-  max-width: 25%;
+  min-width: 40px;
+  min-height: 60px;
+  max-width: 45%;
   max-height: 85%;
 }
 

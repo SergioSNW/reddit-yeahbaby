@@ -6,7 +6,7 @@ export function FeedLoading() {
     <li className="post">
       <div className="score"></div>
       <div className="left-side">
-        <img src=""></img>
+        <img src="/no-image.png"></img>
       </div>
       <div className="right-side">
         <div className="top">

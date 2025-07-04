@@ -32,12 +32,10 @@ export function Header(props) {
   return (
     <div className="header">
       <div className="logos">
-        <img src="/favicon.ico" alt="Reddit?YeahBaby logo" id="logo"></img>
-        <img
-          src="/text-icon.png"
-          alt="Reddit? YeahBaby text Logo"
-          id="text-logo"
-        ></img>
+        <img src="/favicon.png" alt="Reddit?YeahBaby logo" id="logo"></img>
+        <h2>
+          Reddit? <span>YEAH BABY!</span>
+        </h2>
       </div>
       <form>
         <img></img>
